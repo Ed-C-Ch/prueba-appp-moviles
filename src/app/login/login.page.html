@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Iniciar Sesión
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input placeholder="Ingrese su usuario" [(ngModel)]="user.nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Clave</ion-label>
+        <ion-input placeholder="Ingrese su clave" type="password" [(ngModel)]="user.clave"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" [routerLink]="['/home']" (click)="login()">Iniciar Sesion</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <ion-label class="reestablecer" color="primary" [routerLink]="['/reestablecer']" >¿Has olvidado tu contraseña?</ion-label>
+</ion-content>
